@@ -14,3 +14,6 @@ sudo cp -avfR ./home/.* $HOME
 sudo apt-get install lightdm
 sudo apt-get install lightdm-gtk-greeter-settings
 sudo dpkg-reconfigure lightdm
+
+# * add aliases to bashrc
+cat append_to_bashrc.txt >> $HOME/.bashrc

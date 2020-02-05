@@ -1,0 +1,13 @@
+
+# Added by Emilio:
+CUSTOM_SCRIPTS_DIR=$HOME/.custom_scripts/
+BASE_ENV=aixbrain-core
+alias activate="source $CUSTOM_SCRIPTS_DIR/activate_env.sh"
+
+# * open terminator instead of gnome-terminal when clicking "Open in Terminal" in nautilus
+# ! I haven't found a better way to do it since nautilus uses the binary in /usr/libexec/ (nautilus breaks if that file is replaced)
+if ps -o cmd= -p $(ps -o ppid= -p $$) | grep -q gnome; then
+  nohup x-terminal-emulator &> /dev/null &
+  sleep 0.1s
+  exit
+fi
