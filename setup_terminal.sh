@@ -14,6 +14,3 @@ sudo cp -avfR ./home/.* $HOME
 sudo apt-get install lightdm
 sudo apt-get install lightdm-gtk-greeter-settings
 sudo dpkg-reconfigure lightdm
-
-# * reboot
-reboot
