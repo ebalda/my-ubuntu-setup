@@ -220,7 +220,11 @@ prompt_virtualenv() {
         # * [begin] This part added by emilio
         VENV_NAME="$(basename $VIRTUAL_ENV)"
         NUM_FIELDS=$(echo $VENV_NAME | grep -o "-" | wc -l)
-        prompt_segment $color white "$(echo $VENV_NAME | cut -d '-' -f-$NUM_FIELDS)"
+        if [[ "$NUM_FIELDS" -gt "0" ]]; then 
+                prompt_segment $color white "$(echo $VENV_NAME | cut -d '-' -f-$NUM_FIELDS)"
+        else
+                prompt_segment $color white "$(echo $VENV_NAME)"
+        fi
         # * [end]
     fi
 }
