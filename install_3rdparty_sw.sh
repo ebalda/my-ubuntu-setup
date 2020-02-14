@@ -1,3 +1,10 @@
+# * install git
+sudo apt install git
+
+# * install meld
+sudo apt install meld
+git config merge.tool meld
+
 # * install gitkraken
 sudo snap install gitkraken
 
