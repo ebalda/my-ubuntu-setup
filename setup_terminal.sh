@@ -19,4 +19,4 @@ sudo dpkg-reconfigure lightdm
 cat append_to_bashrc.txt >> $HOME/.bashrc
 
 # * load gnome settings
-dconf load / < .my-gnome-settings/dconf-settings.ini
+dconf load / < ./home/.my-gnome-settings/dconf-settings.ini
