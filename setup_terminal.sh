@@ -17,3 +17,6 @@ sudo dpkg-reconfigure lightdm
 
 # * add aliases to bashrc
 cat append_to_bashrc.txt >> $HOME/.bashrc
+
+# * load gnome settings
+dconf load / < .my-gnome-settings/dconf-settings.ini
