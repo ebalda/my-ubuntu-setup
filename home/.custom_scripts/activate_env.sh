@@ -9,5 +9,5 @@ else
 fi
 
 if [ $# -le 1 ]; then
-  bash --init-file <(echo "source $HOME/.bashrc;source $HOME/.local/share/virtualenvs/$ENV_NAME/bin/activate")
+  bash --init-file <(echo "source $HOME/.bashrc;source $HOME/.local/share/virtualenvs/$ENV_NAME/bin/activate; source $AIXBRAIN_PRJ_ROOT/.env")
 fi
