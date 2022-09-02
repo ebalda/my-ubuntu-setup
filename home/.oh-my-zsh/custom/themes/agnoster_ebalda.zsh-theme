@@ -228,9 +228,9 @@ prompt_virtualenv() {
     local VENV_NAME="$(basename $VIRTUAL_ENV)"
     local NUM_FIELDS=$(echo $VENV_NAME | grep -o "-" | wc -l)
     if [[ "$NUM_FIELDS" -gt "0" ]]; then 
-            prompt_segment cyan white "$(echo $VENV_NAME | cut -d '-' -f-$(($NUM_FIELDS-1)))"
+            prompt_segment yellow black "$(echo $VENV_NAME | cut -d '-' -f-$(($NUM_FIELDS-1)))"
     else
-            prompt_segment cyan white "$(echo $VENV_NAME)"
+            prompt_segment yellow black "$(echo $VENV_NAME)"
     fi
     # * [end] part added by emilio
   # //   prompt_segment blue black "(`basename $virtualenv_path`)"
