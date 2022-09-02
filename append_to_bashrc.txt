@@ -1,6 +1,0 @@
-
-# Added by Emilio:
-CUSTOM_SCRIPTS_DIR=$HOME/.custom_scripts/
-BASE_ENV=aixbrain-core
-alias activate="source $CUSTOM_SCRIPTS_DIR/activate_env.sh"
-

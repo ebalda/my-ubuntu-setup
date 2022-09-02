@@ -97,32 +97,3 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-
-# Added by Emilio
-export VIRTUAL_ENV_DISABLE_PROMPT=0
-CUSTOM_SCRIPTS_DIR=$HOME/.custom_scripts
-CUSTOM_ICONS_DIR=$HOME/.custom_icons
-BASE_ENV=aixbrain-core
-alias activate="source $CUSTOM_SCRIPTS_DIR/activate_env.sh"
-alias zshi="source $CUSTOM_SCRIPTS_DIR/zshi.sh"
-alias texmake="latexmk -pdf -pvc -interaction=nonstopmode"
-alias set-custom-icons="bash $CUSTOM_ICONS_DIR/link_icons.sh"
-
-# * open terminator instead of gnome-terminal when clicking "Open in Terminal" in nautilus
-# ! I haven't found a better way to do it since nautilus uses the binary in /usr/libexec/ (nautilus breaks if that file is replaced)
-if ps -o cmd= -p $(ps -o ppid= -p $$) | grep -q gnome; then
-  nohup x-terminal-emulator &> /dev/null &
-  sleep 0.1s
-  exit
-fi
-
-
-### Aixbrain definitions
-export PATH=$HOME/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:$HOME/.local/bin:$HOME/.poetry/bin
-export AIXBRAIN_PRJ_ROOT=$HOME/Documents/aiXbrain/aixbrain-core
-export AIXBRAIN_PYTHON=$HOME/Documents/aiXbrain/aixbrain-core/src/python/aixbrain
-export PYTHONPATH=:$HOME/Documents/aiXbrain/aixbrain-core/src/python
-export PIPENV_VERBOSITY=-1
-alias aixwork="cd $AIXBRAIN_PYTHON && activate"
-alias create-docs="python3 $AIXBRAIN_PRJ_ROOT/make.py create-docs html; echo file://$AIXBRAIN_PRJ_ROOT/docs/build/html/index.html"
-

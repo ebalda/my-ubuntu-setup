@@ -1,4 +1,3 @@
-#!/usr/bin/env bash
 # vim: ft=bash ts=2 sw=2 sts=2
 #
 # agnoster's Theme - https://gist.github.com/3712874
